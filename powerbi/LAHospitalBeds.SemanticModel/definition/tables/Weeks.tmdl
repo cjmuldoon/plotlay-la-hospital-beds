@@ -128,6 +128,8 @@ table Weeks
 
 		annotation SummarizationSetBy = Automatic
 
+		annotation UnderlyingDateTimeDataType = Date
+
 	partition Weeks = m
 		mode: import
 		source =
@@ -141,3 +143,4 @@ table Weeks
 				    Dated
 
 	annotation PBI_ResultType = Table
+

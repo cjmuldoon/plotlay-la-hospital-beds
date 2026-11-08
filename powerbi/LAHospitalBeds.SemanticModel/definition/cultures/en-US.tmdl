@@ -1,1 +1,536 @@
 cultureInfo en-US
+
+	linguisticMetadata =
+			{
+			  "Version": "2.0.0",
+			  "Language": "en-US",
+			  "Entities": {
+			    "weeks.week_date": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Weeks",
+			          "ConceptualProperty": "week_date"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Week": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "weeks.beds_in_use": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Weeks",
+			          "ConceptualProperty": "Beds in use"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Beds in use": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "weeks.icu_beds_in_use": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Weeks",
+			          "ConceptualProperty": "ICU beds in use"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "ICU beds in use": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "weeks.covid19_patients": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Weeks",
+			          "ConceptualProperty": "COVID-19 patients"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "COVID-19 patients": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "weeks.peak_icu_beds_in_use": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Weeks",
+			          "ConceptualProperty": "Peak ICU beds in use"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Peak ICU beds in use": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "weeks.peak_covid19_patients": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Weeks",
+			          "ConceptualProperty": "Peak COVID-19 patients"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Peak COVID-19 patients": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "weeks.beds_in_use_week": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Weeks",
+			          "ConceptualProperty": "Beds in use, week"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Beds in use": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "weeks.covid19_patients_week": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Weeks",
+			          "ConceptualProperty": "COVID-19 patients, week"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "COVID-19 patients": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "weeks.week": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Weeks",
+			          "ConceptualProperty": "week"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Week starting": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "hospitals.hospitals": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Hospitals",
+			          "ConceptualProperty": "Hospitals"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Hospitals": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "hospitals.name_short": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Hospitals",
+			          "ConceptualProperty": "name_short"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Hospital": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "hospitals.hospital_pk": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Hospitals",
+			          "ConceptualProperty": "hospital_pk"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "CMS number": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "hospitals.name": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Hospitals",
+			          "ConceptualProperty": "name"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Hospital": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "hospitals.type": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Hospitals",
+			          "ConceptualProperty": "type"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Type": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "hospitals.city": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Hospitals",
+			          "ConceptualProperty": "city"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "City": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "hospitals.beds_2023_24": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Hospitals",
+			          "ConceptualProperty": "beds_2023_24"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Beds, 2023-24": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "hospitals.occupancy_2023_24": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Hospitals",
+			          "ConceptualProperty": "occupancy_2023_24"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "In use, 2023-24 (%)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "hospitals.occupancy_surge": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Hospitals",
+			          "ConceptualProperty": "occupancy_surge"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "In use, winter surge (%)": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "hospitals.weeks_90": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Hospitals",
+			          "ConceptualProperty": "weeks_90"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Weeks 90% full or more": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tracts.within_5_km": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tracts",
+			          "ConceptualProperty": "Within 5 km"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Within 5 km": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tracts.people_10_km_or_more": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tracts",
+			          "ConceptualProperty": "People 10 km or more"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "People 10 km or more": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tracts.band": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tracts",
+			          "ConceptualProperty": "band"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Distance to a general hospital": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tracts.people": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tracts",
+			          "ConceptualProperty": "People"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "People": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tracts.geoid": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tracts",
+			          "ConceptualProperty": "geoid"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Census tract": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    },
+			    "tracts.distance_peopleweighted": {
+			      "Definition": {
+			        "Binding": {
+			          "ConceptualEntity": "Tracts",
+			          "ConceptualProperty": "Distance, people-weighted"
+			        }
+			      },
+			      "State": "Generated",
+			      "Terms": [
+			        {
+			          "Distance, people-weighted": {
+			            "State": "Suggested",
+			            "Source": {
+			              "Type": "External",
+			              "Agent": "PowerBI.VisualColumnRename"
+			            },
+			            "Weight": 0.9
+			          }
+			        }
+			      ]
+			    }
+			  }
+			}
+		contentType: json
+

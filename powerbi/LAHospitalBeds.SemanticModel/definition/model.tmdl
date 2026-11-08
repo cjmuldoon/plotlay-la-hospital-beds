@@ -7,10 +7,14 @@ model Model
 		returnErrorValuesAsNull
 
 annotation PBI_QueryOrder = ["DataFolder","GetFile","Hospitals","Weeks","Tracts"]
+
 annotation __PBI_TimeIntelligenceEnabled = 0
+
+annotation PBI_ProTooling = ["DevMode"]
 
 ref table Hospitals
 ref table Weeks
 ref table Tracts
 
 ref cultureInfo en-US
+
