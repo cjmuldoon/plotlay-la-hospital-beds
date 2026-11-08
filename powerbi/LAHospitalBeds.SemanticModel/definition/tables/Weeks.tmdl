@@ -16,6 +16,16 @@ table Weeks
 		formatString: #,0
 		lineageTag: 866d25ca-3891-96ac-2e3f-6f70d5bc4171
 
+	/// Beds in use in the week picked, or the latest week when none is
+	measure 'Beds in use, week' = VAR w = MAX ( Weeks[week_date] ) RETURN CALCULATE ( [Beds in use], Weeks[week_date] = w )
+		formatString: 0.0%
+		lineageTag: d78b32e8-d075-0449-56cb-b5f9f9a643e8
+
+	/// COVID-19 patients in the week picked, or the latest week when none is
+	measure 'COVID-19 patients, week' = VAR w = MAX ( Weeks[week_date] ) RETURN CALCULATE ( [COVID-19 patients], Weeks[week_date] = w )
+		formatString: #,0
+		lineageTag: e30c4161-d28e-6b48-0a8f-6690fa6f881b
+
 	/// The busiest week of those in the filter
 	measure 'Peak COVID-19 patients' = MAXX ( VALUES ( Weeks[week] ), [COVID-19 patients] )
 		formatString: #,0

@@ -23,11 +23,11 @@
                       "Entity": "Weeks"
                     }
                   },
-                  "Property": "Beds in use"
+                  "Property": "Beds in use, week"
                 }
               },
-              "queryRef": "Weeks.Beds in use",
-              "nativeQueryRef": "Beds in use",
+              "queryRef": "Weeks.Beds in use, week",
+              "nativeQueryRef": "Beds in use, week",
               "displayName": "Beds in use"
             }
           ]

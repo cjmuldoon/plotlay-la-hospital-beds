@@ -90,11 +90,11 @@
                       "Entity": "Weeks"
                     }
                   },
-                  "Property": "COVID-19 patients"
+                  "Property": "COVID-19 patients, week"
                 }
               },
-              "queryRef": "Weeks.COVID-19 patients",
-              "nativeQueryRef": "COVID-19 patients",
+              "queryRef": "Weeks.COVID-19 patients, week",
+              "nativeQueryRef": "COVID-19 patients, week",
               "displayName": "COVID-19 patients"
             }
           ]
@@ -129,11 +129,11 @@
                       "Entity": "Weeks"
                     }
                   },
-                  "Property": "Beds in use"
+                  "Property": "Beds in use, week"
                 }
               },
-              "queryRef": "Weeks.Beds in use",
-              "nativeQueryRef": "Beds in use",
+              "queryRef": "Weeks.Beds in use, week",
+              "nativeQueryRef": "Beds in use, week",
               "displayName": "Beds in use"
             }
           ]

@@ -23,11 +23,11 @@
                       "Entity": "Hospitals"
                     }
                   },
-                  "Property": "name"
+                  "Property": "name_short"
                 }
               },
-              "queryRef": "Hospitals.name",
-              "nativeQueryRef": "name",
+              "queryRef": "Hospitals.name_short",
+              "nativeQueryRef": "name_short",
               "displayName": "Hospital",
               "active": true
             }
@@ -43,11 +43,11 @@
                       "Entity": "Weeks"
                     }
                   },
-                  "Property": "Beds in use"
+                  "Property": "Beds in use, week"
                 }
               },
-              "queryRef": "Weeks.Beds in use",
-              "nativeQueryRef": "Beds in use",
+              "queryRef": "Weeks.Beds in use, week",
+              "nativeQueryRef": "Beds in use, week",
               "displayName": "Beds in use"
             }
           ]
@@ -63,7 +63,7 @@
                     "Entity": "Weeks"
                   }
                 },
-                "Property": "Beds in use"
+                "Property": "Beds in use, week"
               }
             },
             "direction": "Descending"
@@ -161,7 +161,7 @@
                 "Entity": "Hospitals"
               }
             },
-            "Property": "name"
+            "Property": "name_short"
           }
         },
         "type": "TopN",
@@ -194,7 +194,7 @@
                               "Source": "s"
                             }
                           },
-                          "Property": "name"
+                          "Property": "name_short"
                         },
                         "Name": "field"
                       }
@@ -209,7 +209,7 @@
                                 "Source": "m"
                               }
                             },
-                            "Property": "Beds in use"
+                            "Property": "Beds in use, week"
                           }
                         }
                       }
@@ -238,7 +238,7 @@
                             "Source": "s"
                           }
                         },
-                        "Property": "name"
+                        "Property": "name_short"
                       }
                     }
                   ],
@@ -254,5 +254,11 @@
         }
       }
     ]
-  }
+  },
+  "annotations": [
+    {
+      "name": "plotlay.categoryLabels",
+      "value": "[\"Adventist White Mem\", \"Adventist White Mem…\", \"Alhambra Hospital MC\", \"Barlow Respiratory Hosp\", \"California Hospital MC LA\", \"Catalina Island MC\", \"Cedars-Sinai MC\", \"Cedars-Sinai Marina Del…\", \"Centinela Hospital MC\", \"Children's Hosp of LA\", \"City of Hope Helford…\", \"East LA Doctors Hospital\", \"Emanate Foothill Presb…\", \"Emanate Inter-Comm…\", \"Encino Hospital MC\", \"Glendale Adventist MC\", \"Glendale Mem Hosp…\", \"Glendora Oaks…\", \"Greater El Monte…\", \"Henry Mayo Newhall…\", \"Hollywood Presb MC\", \"Huntington Park\", \"Kaiser Baldwin Park\", \"Kaiser Downey\", \"Kaiser Los Angeles\", \"Kaiser Panorama City\", \"Kaiser South Bay\", \"Kaiser West LA\", \"Kaiser Woodland Hills\", \"Kindred  Baldwin Park\", \"Kindred  Paramount\", \"Kindred  South Bay\", \"Kindred La Mirada\", \"Kindred Los Angeles\", \"LA Community Hospital\", \"LA Downtown MC\", \"LAC/Harbor-UCLA MC\", \"LAC/Olive View-UCLA MC\", \"LAC/Rancho Los…\", \"Los Angeles General MC\", \"MLK Jr Community Hosp\", \"Mem Hosp of Gardena\", \"MemCare Long Beach…\", \"MemCare Miller…\", \"Mission Community Hosp\", \"Monrovia Memorial Hosp\", \"Northridge Hospital MC\", \"PIH Downey Hospital\", \"PIH Good Samaritan…\", \"PIH Hospital-Whittier\", \"Pacifica Hosp of the…\", \"Palmdale Regional MC\", \"Pomona Valley Hosp MC\", \"Prov Cedars-Sinai…\", \"Prov Holy Cross MC\", \"Prov LCM MC San Pedro\", \"Prov LCM MC Torrance\", \"Prov Saint Joseph MC\", \"Ronald Reagan UCLA MC\", \"Saint Francis MC\", \"Saint John's Health Ctr\", \"San Dimas Comm Hosp\", \"San Gabriel Valley MC\", \"Santa Monica UCLA MC…\", \"SoCal Hosp Hollywood\", \"Torrance Memorial MC\", \"UCLA West Valley MC\", \"USC Kenneth Norris Jr…\", \"USC Verdugo Hills Hosp\", \"Valley Presbyterian Hosp\", \"West Covina MC\", \"Whittier Hospital MC\"]"
+    }
+  ]
 }

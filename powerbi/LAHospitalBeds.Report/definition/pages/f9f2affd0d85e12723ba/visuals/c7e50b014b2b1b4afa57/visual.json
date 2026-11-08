@@ -23,11 +23,11 @@
                       "Entity": "Weeks"
                     }
                   },
-                  "Property": "COVID-19 patients"
+                  "Property": "COVID-19 patients, week"
                 }
               },
-              "queryRef": "Weeks.COVID-19 patients",
-              "nativeQueryRef": "COVID-19 patients",
+              "queryRef": "Weeks.COVID-19 patients, week",
+              "nativeQueryRef": "COVID-19 patients, week",
               "displayName": "COVID-19 patients"
             }
           ]

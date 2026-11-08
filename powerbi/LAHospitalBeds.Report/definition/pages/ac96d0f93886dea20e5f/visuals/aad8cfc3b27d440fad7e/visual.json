@@ -117,7 +117,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Census tracts (darker: farther)'"
+                  "Value": "'Distance to the nearest general hospital, by census tract'"
                 }
               }
             },
@@ -309,7 +309,7 @@
   "annotations": [
     {
       "name": "plotlay.legend",
-      "value": "[[\"#6b1a10\", \"darker: more\"], [\"#f8dcc6\", \"paler: less\"]]"
+      "value": "[[\"#6b1a10\", \"darker: farther\"], [\"#f8dcc6\", \"paler: nearer\"]]"
     }
   ]
 }
