@@ -1,0 +1,87 @@
+hospital_pk,name,type,city,beds_2023_24,icu_beds_2023_24,occupancy_surge,icu_occupancy_surge,occupancy_2023_24,weeks_90,weeks_reported,lat,lng
+050040,LAC/Olive View-UCLA Medical Center,General (short term),Sylmar,237.0,27.7,76.7,86.3,75.5,19,203,34.326039019,-118.445740034
+050056,Antelope Valley Hospital,General (short term),Lancaster,261.0,28.3,94.9,96.7,95.4,190,203,34.688388987,-118.158356006
+050058,Glendale Mem Hospital & Hlth Center,General (short term),Glendale,277.0,24.0,99.7,99.9,48.6,105,203,34.128117014,-118.256949986
+050063,Hollywood Presbyterian Medical Center,General (short term),Los Angeles,291.0,20.7,63.3,72.4,67.4,0,203,34.096059247,-118.291683229
+050078,Providence Little Co of Mary Med Ctr San Pedro,General (short term),San Pedro,89.0,7.1,92.6,97.0,90.1,78,203,33.738199009,-118.30361003
+050091,Community Hospital of Huntington Park,General (short term),Huntington Park,61.0,4.0,82.8,99.7,67.1,2,189,33.989510007,-118.224257966
+050096,West Covina Medical Center,General (short term),West Covina,13.0,0.0,25.8,,0.0,1,203,34.071182014,-117.944848984
+050103,Adventist Health White Memorial,General (short term),Los Angeles,383.0,37.0,88.6,95.5,70.6,19,203,34.049247999,-118.217739024
+050104,Saint Francis Medical Center,General (short term),Lynwood,267.7,29.9,90.4,96.2,93.4,166,203,33.929809986,-118.202690994
+050112,Santa Monica - UCLA Med Ctr & Orthopaedic Hospital,General (short term),Santa Monica,268.0,22.0,84.7,89.7,93.0,109,203,34.027358994,-118.486221022
+050116,Northridge Hospital Medical Center,General (short term),Northridge,257.3,27.3,90.4,96.8,90.5,93,203,34.220100983,-118.53299003
+050124,USC Verdugo Hills Hospital,General (short term),Glendale,108.0,12.0,93.0,91.1,84.7,24,203,34.204631007,-118.21595502
+050126,Valley Presbyterian Hospital,General (short term),Van Nuys,324.0,20.0,60.8,77.8,63.1,15,203,34.195086995,-118.463263995
+050132,San Gabriel Valley Medical Center,General (short term),San Gabriel,187.0,19.0,83.8,93.6,73.8,4,203,34.100849006,-118.105900967
+050135,Southern California Hospital at Hollywood,General (short term),Hollywood,380.0,34.0,65.1,56.3,70.1,0,199,34.096437988,-118.325179014
+050137,Kaiser Foundation Hospital - Panorama City,General (short term),Panorama City,166.3,22.0,81.1,95.3,63.3,1,203,34.218777984,-118.430112981
+050138,Kaiser Foundation Hospital - Los Angeles,General (short term),Los Angeles,403.1,89.0,70.9,83.2,55.8,0,203,34.09882398,-118.29505504
+050139,Kaiser Foundation Hospital - Downey,General (short term),Downey,271.7,28.0,75.0,99.5,87.1,27,203,33.918977004,-118.129197964
+050146,City of Hope Helford Clinical Research Hospital,General (short term),Duarte,233.0,18.0,97.9,78.3,96.2,203,203,34.129684011,-117.970858029
+050149,California Hospital Medical Center LA,General (short term),Los Angeles,309.0,30.0,80.6,86.3,69.7,0,203,34.037395988,-118.265864979
+050158,Encino Hospital Medical Center,General (short term),Encino,69.4,5.1,98.9,99.3,88.5,110,203,34.157440012,-118.487032977
+050169,PIH Health Hospital-Whittier,General (short term),Whittier,398.0,48.0,75.0,81.2,64.7,0,203,33.969136995,-118.048910982
+050191,St Mary Medical Center,General (short term),Long Beach,342.0,40.0,53.7,69.1,56.3,0,203,33.780021017,-118.186046965
+050204,Palmdale Regional Medical Center,General (short term),Palmdale,184.0,24.0,84.5,81.8,78.3,0,203,34.583061992,-118.144312966
+050205,Glendora Oaks Behavioral Health Hospital,General (short term),Glendora,,,,,,0,13,34.128270989,-117.865351996
+050231,Pomona Valley Hospital Medical Center,General (short term),Pomona,378.0,50.0,72.5,95.1,75.9,0,203,34.076952997,-117.750841034
+050235,Providence Saint Joseph Medical Ctr,General (short term),Burbank,276.4,35.7,89.0,94.5,84.2,34,203,34.156759989,-118.329369965
+050238,USC Arcadia Hospital,General (short term),Arcadia,207.9,19.6,96.2,94.2,96.8,193,203,34.134458007,-118.041673041
+050239,Glendale Adventist Medical Center,General (short term),Glendale,274.4,19.1,95.2,98.9,94.6,163,203,34.150686001,-118.230385975
+050262,Ronald Reagan UCLA Medical Center,General (short term),Los Angeles,424.0,105.0,91.6,92.8,97.5,193,203,34.066454998,-118.446328025
+050278,Providence Holy Cross Medical Center,General (short term),Mission Hills,262.1,16.6,95.2,98.9,95.6,170,203,34.279904982,-118.459944007
+050281,Alhambra Hospital Medical Center,General (short term),Alhambra,68.4,8.6,91.2,98.0,87.2,21,203,34.090317983,-118.143976013
+050290,Saint John's Health Center,General (short term),Santa Monica,186.1,17.3,89.6,95.0,84.5,30,203,34.030187006,-118.479114006
+050350,Adventist Health White Memorial Montebello,General (short term),Montebello,,,81.1,92.4,,0,132,34.015019994,-118.100648028
+050351,Torrance Memorial Medical Center,General (short term),Torrance,429.0,48.0,74.8,89.0,87.5,79,203,33.811603987,-118.344118008
+050353,Providence Little Company of Mary Med Ctr Torrance,General (short term),Torrance,260.9,23.1,93.9,96.3,90.7,160,203,33.838512997,-118.357282038
+050373,Los Angeles General Medical Center,General (short term),Los Angeles,544.6,85.1,84.0,87.7,86.5,10,203,34.056306026,-118.206522179
+050376,LAC/Harbor-UCLA Med Center,General (short term),Torrance,394.7,42.0,83.0,91.0,76.9,31,203,33.830266001,-118.292063036
+050378,Pacifica Hospital of the Valley,General (short term),Sun Valley,91.0,7.0,99.7,94.5,83.4,128,203,34.24005402,-118.396533988
+050382,Emanate Health Inter-Community Hospital,General (short term),Covina,501.0,40.0,68.1,95.3,58.3,0,203,34.088007009,-117.893475042
+050393,PIH Health Downey Hospital,General (short term),Downey,134.0,18.0,92.7,94.5,70.1,8,203,33.934369992,-118.130941986
+050411,Kaiser Foundation Hospital - South Bay,General (short term),Harbor City,190.0,20.0,85.6,79.0,63.4,7,203,33.789297826,-118.29373374
+050438,Huntington Hospital,General (short term),Pasadena,499.0,26.0,59.8,63.6,75.5,0,203,34.133601,-118.153487965
+050468,Memorial Hospital of Gardena,General (short term),Gardena,172.0,10.0,89.0,100.0,75.9,29,203,33.893000984,-118.294781036
+050471,PIH Health Good Samaritan Hospital,General (short term),Los Angeles,246.0,59.0,93.9,75.9,64.0,12,203,34.05398302,-118.26585601
+050481,UCLA West Valley Medical Center,General (short term),West Hills,225.0,33.0,61.4,76.0,49.2,0,203,34.202891008,-118.628730978
+050485,MemorialCare Long Beach Medical Center,General (short term),Long Beach,390.0,55.0,68.7,85.4,78.5,0,203,33.808187984,-118.187163015
+050561,Kaiser Foundation Hospital - West LA,General (short term),Los Angeles,166.0,30.0,74.0,78.0,83.7,3,203,34.03858802,-118.375230962
+050581,UCI Health-Lakewood,General (short term),Lakewood,180.0,30.0,99.1,87.3,87.7,81,203,33.859731995,-118.148166965
+050588,San Dimas Community Hospital,General (short term),San Dimas,143.0,8.0,41.3,100.0,28.2,0,203,34.099365697,-117.835075179
+050597,Emanate Health Foothill Presbyterian Hospital,General (short term),Glendora,103.0,18.0,81.7,98.1,72.4,1,203,34.132843988,-117.871384033
+050624,Henry Mayo Newhall Hospital,General (short term),Valencia,290.6,18.0,70.9,70.8,71.5,0,203,34.397736017,-118.553732978
+050625,Cedars-Sinai Medical Center,General (short term),Los Angeles,908.3,108.0,93.9,107.5,92.0,180,203,34.076548989,-118.380016023
+050641,East Los Angeles Doctors Hospital,General (short term),Los Angeles,54.0,10.0,100.0,77.9,43.8,43,203,34.023330987,-118.184318029
+050660,USC Kenneth Norris Jr Cancer Hospital,General (short term),Los Angeles,49.3,4.9,84.3,,91.2,120,203,34.060838997,-118.205351996
+050663,Los Angeles Community Hospital,General (short term),Los Angeles,152.0,15.0,84.1,71.5,78.2,3,200,34.019355995,-118.186614
+050677,Kaiser Foundation Hospital - Woodland Hills,General (short term),Woodland Hills,185.4,17.0,65.5,96.1,71.3,1,203,34.170321992,-118.589822016
+050696,Keck Hospital of USC,General (short term),Los Angeles,268.6,73.3,93.6,93.9,93.5,192,203,34.061993018,-118.201339998
+050704,Mission Community Hospital,General (short term),Panorama City,145.0,10.0,80.0,90.0,79.8,1,203,34.220318996,-118.456599963
+050717,LAC/Rancho Los Amigos National Rehabilitation Ctr,General (short term),Downey,127.0,5.25,88.6,78.0,79.9,8,203,33.929829013,-118.157609011
+050723,Kaiser Foundation Hospital - Baldwin Park,General (short term),Baldwin Park,164.4,12.0,79.2,99.7,86.4,27,203,34.065346994,-117.985375988
+050735,Whittier Hospital Medical Center,General (short term),Whittier,176.0,16.0,75.8,99.6,49.2,0,203,33.950385001,-118.00463098
+050736,Monterey Park Hospital,General (short term),Monterey Park,70.6,10.0,78.0,92.2,66.4,1,203,34.049422007,-118.138309009
+050737,Garfield Medical Center,General (short term),Monterey Park,210.0,22.0,64.8,77.8,63.6,0,203,34.067924011,-118.123787026
+050738,Greater El Monte Community Hospital,General (short term),South El Monte,101.0,10.0,62.0,99.0,37.1,0,203,34.048055002,-118.04346702
+050739,Centinela Hospital Medical Center,General (short term),Inglewood,198.1,26.3,94.7,99.7,85.5,17,203,33.950738005,-118.348158001
+050740,Cedars-Sinai Marina Del Rey Hospital,General (short term),Marina Del Rey,93.0,12.0,90.7,79.2,81.4,20,203,33.982157988,-118.439259985
+050742,Olympia Medical Center,General (short term),Los Angeles,0.0,0.0,71.5,77.1,,4,65,34.057156995,-118.36054
+050755,Sherman Oaks Hospital,General (short term),Sherman Oaks,93.0,10.0,71.6,96.9,91.3,76,203,34.160215009,-118.449408039
+050761,Providence Cedars-Sinai Tarzana Medical Center,General (short term),Tarzana,165.0,13.0,88.0,97.5,86.0,27,203,34.170110013,-118.531222035
+050763,LA Downtown Medical Center,General (short term),Los Angeles,83.0,0.0,94.8,89.9,87.3,166,203,34.069707009,-118.263439004
+050771,Coast Plaza Hospital,General (short term),Norwalk,45.0,7.0,62.2,97.6,69.9,6,203,33.912592006,-118.098481976
+050776,College Medical Center,General (short term),Long Beach,236.0,8.0,66.8,95.8,77.1,0,203,33.806920011,-118.193076029
+050779,"Martin Luther King, Jr. Community Hospital",General (short term),Los Angeles,131.0,20.0,86.3,98.5,98.1,75,203,33.92397199,-118.241754015
+050782,Casa Colina Hospital,General (short term),Pomona,99.0,6.0,81.4,36.3,72.1,0,203,34.097917017,-117.747462959
+050785,DOCS Surgical Hospital,General (short term),Los Angeles,17.0,0.0,9.5,,1.9,0,197,34.057247017,-118.36224798
+051307,Catalina Island Medical Center,Critical access,Avalon,12.0,0.0,41.8,,32.5,0,203,33.339271002,-118.330817017
+052031,Barlow Respiratory Hospital,Long term care,Los Angeles,82.6,6.0,94.1,0.0,91.6,78,203,34.075840006,-118.24818503
+052032,Kindred Hospital - Los Angeles,Long term care,Los Angeles,58.3,5.0,97.5,99.3,96.2,196,203,33.990109984,-118.37854701
+052038,Kindred Hospital - La Mirada,Long term care,La Mirada,158.6,19.0,90.6,90.1,81.7,87,203,33.916327988,-118.01348797
+052045,Kindred Hospital Baldwin Park,Long term care,Baldwin Park,69.4,8.0,92.9,94.1,99.5,188,203,34.063028979,-117.967523959
+052046,Kindred Hospital Paramount,Long term care,Paramount,88.1,12.0,92.9,92.3,91.1,149,203,33.884328983,-118.162225009
+052050,Kindred Hospital South Bay,Long term care,Gardena,51.6,8.9,95.0,94.3,89.8,135,203,33.889989994,-118.297428963
+052054,Monrovia Memorial Hospital,Long term care,Monrovia,49.0,4.0,39.0,100.0,46.1,5,202,34.148734987,-117.992642009
+053302,Children's Hosp of Los Angeles,Children's,Los Angeles,392.0,0.0,87.6,,85.7,117,203,34.097496999,-118.290149029
+053309,MemorialCare Miller Children's & Women's Hosp LB,Children's,Long Beach,247.0,0.0,50.3,,59.7,0,203,33.808187984,-118.187163015

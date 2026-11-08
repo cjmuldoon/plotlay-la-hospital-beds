@@ -1,0 +1,310 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
+  "name": "c5c02dd9ff820a156999",
+  "position": {
+    "x": 40,
+    "y": 110,
+    "z": 1,
+    "height": 900,
+    "width": 1840,
+    "tabOrder": 1
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospitals"
+                    }
+                  },
+                  "Property": "name"
+                }
+              },
+              "queryRef": "Hospitals.name",
+              "nativeQueryRef": "name",
+              "displayName": "Hospital"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospitals"
+                    }
+                  },
+                  "Property": "type"
+                }
+              },
+              "queryRef": "Hospitals.type",
+              "nativeQueryRef": "type",
+              "displayName": "Type"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospitals"
+                    }
+                  },
+                  "Property": "city"
+                }
+              },
+              "queryRef": "Hospitals.city",
+              "nativeQueryRef": "city",
+              "displayName": "City"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospitals"
+                    }
+                  },
+                  "Property": "beds_2023_24"
+                }
+              },
+              "queryRef": "Hospitals.beds_2023_24",
+              "nativeQueryRef": "beds_2023_24",
+              "displayName": "Beds, 2023-24"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospitals"
+                    }
+                  },
+                  "Property": "occupancy_2023_24"
+                }
+              },
+              "queryRef": "Hospitals.occupancy_2023_24",
+              "nativeQueryRef": "occupancy_2023_24",
+              "displayName": "In use, 2023-24 (%)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospitals"
+                    }
+                  },
+                  "Property": "occupancy_surge"
+                }
+              },
+              "queryRef": "Hospitals.occupancy_surge",
+              "nativeQueryRef": "occupancy_surge",
+              "displayName": "In use, winter surge (%)"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "Hospitals"
+                    }
+                  },
+                  "Property": "weeks_90"
+                }
+              },
+              "queryRef": "Hospitals.weeks_90",
+              "nativeQueryRef": "weeks_90",
+              "displayName": "Weeks 90% full or more"
+            }
+          ]
+        }
+      },
+      "sortDefinition": {
+        "sort": [
+          {
+            "field": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "Hospitals"
+                  }
+                },
+                "Property": "occupancy_2023_24"
+              }
+            },
+            "direction": "Descending"
+          }
+        ]
+      }
+    },
+    "drillFilterOtherVisuals": true,
+    "visualContainerObjects": {
+      "title": [
+        {
+          "properties": {
+            "show": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "text": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Hospitals'"
+                }
+              }
+            },
+            "titleWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            },
+            "fontFamily": {
+              "expr": {
+                "Literal": {
+                  "Value": "'Segoe UI Semibold'"
+                }
+              }
+            }
+          }
+        }
+      ]
+    },
+    "objects": {
+      "columnWidth": [
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "728.8D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Hospitals.name"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "312.9D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Hospitals.type"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "257.4D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Hospitals.city"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "134.7D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Hospitals.beds_2023_24"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "134.7D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Hospitals.occupancy_2023_24"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "118.8D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Hospitals.occupancy_surge"
+          }
+        },
+        {
+          "properties": {
+            "value": {
+              "expr": {
+                "Literal": {
+                  "Value": "118.8D"
+                }
+              }
+            }
+          },
+          "selector": {
+            "metadata": "Hospitals.weeks_90"
+          }
+        }
+      ],
+      "columnHeaders": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "true"
+                }
+              }
+            }
+          }
+        }
+      ],
+      "values": [
+        {
+          "properties": {
+            "wordWrap": {
+              "expr": {
+                "Literal": {
+                  "Value": "false"
+                }
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

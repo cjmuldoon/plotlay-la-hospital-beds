@@ -1,0 +1,133 @@
+table Weeks
+	lineageTag: be71e9f4-1f9b-c90a-a6c8-8d78954051c7
+
+	/// Inpatient beds in use over inpatient beds reported (7-day averages), for the hospitals and weeks in the filter
+	measure 'Beds in use' = DIVIDE ( SUM ( Weeks[beds_used] ), SUM ( Weeks[beds] ) )
+		formatString: 0.0%
+		lineageTag: b84dc1d8-78fb-6216-5335-a80d48ba05bd
+
+	/// Staffed adult ICU beds in use over staffed adult ICU beds
+	measure 'ICU beds in use' = DIVIDE ( SUM ( Weeks[icu_used] ), SUM ( Weeks[icu_beds] ) )
+		formatString: 0.0%
+		lineageTag: d574eac0-bf3d-4af3-8946-f555c297a32d
+
+	/// Confirmed and suspected COVID-19 inpatients, 7-day average, added up
+	measure 'COVID-19 patients' = SUM ( Weeks[covid_patients] )
+		formatString: #,0
+		lineageTag: 866d25ca-3891-96ac-2e3f-6f70d5bc4171
+
+	/// The busiest week of those in the filter
+	measure 'Peak COVID-19 patients' = MAXX ( VALUES ( Weeks[week] ), [COVID-19 patients] )
+		formatString: #,0
+		lineageTag: 07c0d544-0ee0-d2fc-82a9-4fb18915bc3b
+
+	/// The fullest week of those in the filter, county-wide
+	measure 'Peak ICU beds in use' = MAXX ( VALUES ( Weeks[week] ), [ICU beds in use] )
+		formatString: 0.0%
+		lineageTag: a4323e7d-de34-9092-0879-1d75150719ae
+
+	measure 'Hospitals reporting' = DISTINCTCOUNT ( Weeks[hospital_pk] )
+		formatString: #,0
+		lineageTag: 55ca73ff-4abf-70b0-79b5-deead1014dd0
+
+	column hospital_pk
+		dataType: string
+		lineageTag: 5be5968c-a62e-68e1-abf5-3a44e0b85c8c
+		summarizeBy: none
+		sourceColumn: hospital_pk
+
+		annotation SummarizationSetBy = Automatic
+
+	column week
+		dataType: string
+		lineageTag: 9cceeafd-bd9e-c51a-186c-b21c81173b89
+		summarizeBy: none
+		sourceColumn: week
+
+		annotation SummarizationSetBy = Automatic
+
+	column beds
+		dataType: double
+		formatString: #,0
+		lineageTag: 7739e927-e667-7afe-a560-e416c2fdeef6
+		summarizeBy: none
+		sourceColumn: beds
+
+		annotation SummarizationSetBy = Automatic
+
+	column beds_used
+		dataType: double
+		formatString: #,0
+		lineageTag: ed910e4c-4572-4a7b-5359-0547dfdbe8d9
+		summarizeBy: none
+		sourceColumn: beds_used
+
+		annotation SummarizationSetBy = Automatic
+
+	column occupancy
+		dataType: double
+		formatString: 0.0
+		lineageTag: f23972de-5dd1-0b9b-b975-9c835a300839
+		summarizeBy: none
+		sourceColumn: occupancy
+
+		annotation SummarizationSetBy = Automatic
+
+	column covid_patients
+		dataType: double
+		formatString: #,0
+		lineageTag: bfd054b8-579a-8900-9034-fcb3a9919826
+		summarizeBy: none
+		sourceColumn: covid_patients
+
+		annotation SummarizationSetBy = Automatic
+
+	column icu_beds
+		dataType: double
+		formatString: #,0
+		lineageTag: 27c346af-eccc-4c8d-c611-2723923d97e1
+		summarizeBy: none
+		sourceColumn: icu_beds
+
+		annotation SummarizationSetBy = Automatic
+
+	column icu_used
+		dataType: double
+		formatString: #,0
+		lineageTag: 2e416e47-a6f4-50dc-37c6-df5ac55e4117
+		summarizeBy: none
+		sourceColumn: icu_used
+
+		annotation SummarizationSetBy = Automatic
+
+	column icu_occupancy
+		dataType: double
+		formatString: 0.0
+		lineageTag: dbd61819-cefb-b5fe-5c16-f7d4043a7479
+		summarizeBy: none
+		sourceColumn: icu_occupancy
+
+		annotation SummarizationSetBy = Automatic
+
+	column week_date
+		dataType: dateTime
+		formatString: d mmm yyyy
+		lineageTag: 3f8e6eec-2a22-109e-9b78-d20ec42bc366
+		summarizeBy: none
+		sourceColumn: week_date
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Weeks = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(GetFile("tables/hospital_weeks.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Kept = Table.SelectColumns(Promoted, {"hospital_pk", "week", "beds", "beds_used", "occupancy", "covid_patients", "icu_beds", "icu_used", "icu_occupancy"}),
+				    Typed = Table.TransformColumnTypes(Kept, {{"hospital_pk", type text}, {"week", type text}, {"beds", type number}, {"beds_used", type number}, {"occupancy", type number}, {"covid_patients", type number}, {"icu_beds", type number}, {"icu_used", type number}, {"icu_occupancy", type number}}, "en-US"),
+				    Dated = Table.AddColumn(Typed, "week_date", each Date.FromText([week]), type date)
+				in
+				    Dated
+
+	annotation PBI_ResultType = Table

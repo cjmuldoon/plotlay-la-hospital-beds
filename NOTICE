@@ -1,0 +1,47 @@
+How full were Los Angeles County's hospitals, and how far do people live from one?
+Copyright 2026 Craig Muldoon. Made with Plotlay (https://www.getplotlay.com).
+
+This repository contains code, data we made, and data from the sources below.
+
+CODE
+  The notebook and the Power BI project (its Power Query, DAX and report files) are licensed under the MIT licence
+  (LICENSE).
+
+DATA WE MADE
+  The tables in data/tables/ (each hospital's summary and weeks, the county's weeks, each tract's people and distance
+  to a hospital), the hospital and tract shapes in data/geometry/ and the visuals are licensed under Creative Commons
+  Attribution 4.0 International (LICENSE-DATA). Please credit: "LA County hospital beds: Plotlay (getplotlay.com),
+  from HHS and U.S. Census Bureau data". They are made from the sources below.
+
+UPSTREAM SOURCES
+
+  U.S. Department of Health and Human Services: COVID-19 Reported Patient Impact and Hospital Capacity by Facility,
+  dataset anag-cw7u, healthdata.gov (final update May 2024, last week 21 April 2024).
+  https://healthdata.gov/Hospital/COVID-19-Reported-Patient-Impact-and-Hospital-Capa/anag-cw7u
+  A work of the United States Government, public domain in the United States (17 U.S.C. 105).
+  Changes: Los Angeles County rows only, from the week of 7 June 2020; suppressed small counts (-999999) left blank;
+  record 05T782 dropped (it repeats 050782 week for week from December 2022) and 05T485 (a temporary site) added to
+  050485; shares in use worked out from the beds and beds in use; names in title case with acronyms restored and two
+  misspellings corrected; each hospital drawn as a disc 1 km across at its geocoded address.
+
+  U.S. Census Bureau: Cartographic Boundary Files 2022, census tracts, California (1:500,000); American Community Survey 2018-2022
+  5-year estimates, table B01003 (total population), census tracts. Public domain.
+  Changes: Los Angeles County tracts; the straight-line distance from a point inside each tract to the nearest general
+  hospital, and beds per 1,000 people within 5, 10 and 20 km (a two-step ratio), worked out by us.
+
+  Base map in the Plotlay project and the app screenshots
+    USGS The National Map: US Topo (public domain).
+
+POWER BI MAP CONTEXT
+  The Shape Map in powerbi/ draws the neighbouring counties round the tracts, with large water cut out: US Census Bureau,
+  TIGERweb (Counties and Areal Hydrography), public domain, generalised and cut to the map frame. The ocean is the map
+  background showing where no land is drawn.
+
+NOT INCLUDED
+  No patient-level data: every value is a weekly total per hospital as HHS published it. Nothing in this repository is
+  derived from OpenStreetMap. No imagery was traced, and no Google, Nearmap, Esri or Mapbox imagery was used. Nothing
+  here implies endorsement by HHS, the Census Bureau or any hospital.
+
+THIRD-PARTY SOFTWARE
+  The notebook uses pandas, GeoPandas, Shapely, pyproj and Matplotlib (installed from requirements.txt, each under its
+  own licence). Fonts in the visuals: IBM Plex Sans and IBM Plex Sans Condensed, SIL Open Font License 1.1.

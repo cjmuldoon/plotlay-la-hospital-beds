@@ -1,0 +1,110 @@
+table Tracts
+	lineageTag: 03e1e5e3-13ae-8be4-3541-eee45758f6c2
+
+	/// Residents, ACS 2018-22 5-year estimates
+	measure People = SUM ( Tracts[population] )
+		formatString: #,0
+		lineageTag: 2504f7a8-54f6-d11c-a53e-b30613f3ea06
+
+	/// Share of residents whose tract is under 5 km in a straight line from a general hospital
+	measure 'Within 5 km' = DIVIDE ( CALCULATE ( [People], Tracts[nearest_km] < 5 ), [People] )
+		formatString: 0.0%
+		lineageTag: 7a1fc9f7-c41c-4065-1deb-dd8c02f50275
+
+	measure 'People 10 km or more' = CALCULATE ( [People], Tracts[nearest_km] >= 10 )
+		formatString: #,0
+		lineageTag: 30042d1d-b197-3443-473f-97ed25dc101e
+
+	/// Mean straight-line km to the nearest general hospital, each tract counted by its residents
+	measure 'Distance, people-weighted' = DIVIDE ( SUMX ( Tracts, Tracts[population] * Tracts[nearest_km] ), [People] )
+		formatString: 0.00
+		lineageTag: 71d57b4c-7680-b780-6b13-b6a5933c92d9
+
+	/// Two-step ratio: each hospital's beds shared by everyone within 10 km of it
+	measure 'Beds per 1,000 within 10 km' = DIVIDE ( SUMX ( Tracts, Tracts[population] * Tracts[beds_per_1000_10km] ), [People] )
+		formatString: 0.00
+		lineageTag: c7e1bc55-ae2f-dd2f-9aea-6adcbd1c56ee
+
+	column geoid
+		dataType: string
+		lineageTag: 0dd43ff2-88ac-ebd0-f3de-5aaa10c69f4c
+		summarizeBy: none
+		sourceColumn: geoid
+
+		annotation SummarizationSetBy = Automatic
+
+	column population
+		dataType: int64
+		formatString: #,0
+		lineageTag: b5ae68a8-0a79-9dec-8aeb-a538ced049a3
+		summarizeBy: none
+		sourceColumn: population
+
+		annotation SummarizationSetBy = Automatic
+
+	column land_m2
+		dataType: double
+		formatString: #,0
+		lineageTag: 17b3828d-d003-e39f-6d03-faec62fa7945
+		summarizeBy: none
+		sourceColumn: land_m2
+
+		annotation SummarizationSetBy = Automatic
+
+	column nearest_km
+		dataType: double
+		formatString: 0.00
+		lineageTag: 07d87b6b-b005-4146-6245-6fd8c2207ab7
+		summarizeBy: none
+		sourceColumn: nearest_km
+
+		annotation SummarizationSetBy = Automatic
+
+	column band
+		dataType: string
+		lineageTag: 82a20bc0-5fdf-e7ff-d7bb-94dd39a10990
+		summarizeBy: none
+		sourceColumn: band
+		sortByColumn: band_order
+
+		annotation SummarizationSetBy = Automatic
+
+	column nearest_hospital
+		dataType: string
+		lineageTag: 6f7467b3-dc5a-9668-d658-0efab89a6fa5
+		summarizeBy: none
+		sourceColumn: nearest_hospital
+
+		annotation SummarizationSetBy = Automatic
+
+	column beds_per_1000_10km
+		dataType: double
+		formatString: 0.00
+		lineageTag: bc75fc32-1440-1173-d664-1cdacd59adbf
+		summarizeBy: none
+		sourceColumn: beds_per_1000_10km
+
+		annotation SummarizationSetBy = Automatic
+
+	column band_order
+		dataType: int64
+		formatString: 0
+		lineageTag: 5da4e9f5-f90a-ceee-6640-e1f52abf9241
+		summarizeBy: none
+		sourceColumn: band_order
+
+		annotation SummarizationSetBy = Automatic
+
+	partition Tracts = m
+		mode: import
+		source =
+				let
+				    Source = Csv.Document(GetFile("tables/tract_access.csv"), [Delimiter = ",", Encoding = 65001, QuoteStyle = QuoteStyle.Csv]),
+				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
+				    Kept = Table.SelectColumns(Promoted, {"geoid", "population", "land_m2", "nearest_km", "band", "nearest_hospital", "beds_per_1000_10km"}),
+				    Typed = Table.TransformColumnTypes(Kept, {{"geoid", type text}, {"population", Int64.Type}, {"land_m2", type number}, {"nearest_km", type number}, {"band", type text}, {"nearest_hospital", type text}, {"beds_per_1000_10km", type number}}, "en-US"),
+				    Ordered = Table.AddColumn(Typed, "band_order", each List.PositionOf({"0 to 2 km", "2 to 5 km", "5 to 10 km", "10 to 20 km", "20 km or more"}, [band]), Int64.Type)
+				in
+				    Ordered
+
+	annotation PBI_ResultType = Table
