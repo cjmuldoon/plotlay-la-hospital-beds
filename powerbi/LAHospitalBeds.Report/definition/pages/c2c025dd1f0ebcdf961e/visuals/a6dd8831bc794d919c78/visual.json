@@ -3,9 +3,9 @@
   "name": "a6dd8831bc794d919c78",
   "position": {
     "x": 920,
-    "y": 110,
+    "y": 133,
     "z": 1,
-    "height": 150,
+    "height": 127,
     "width": 420,
     "tabOrder": 1
   },
@@ -23,12 +23,12 @@
                       "Entity": "Hospitals"
                     }
                   },
-                  "Property": "Hospitals"
+                  "Property": "Hospital count"
                 }
               },
-              "queryRef": "Hospitals.Hospitals",
-              "nativeQueryRef": "Hospitals",
-              "displayName": "Hospitals"
+              "queryRef": "Hospitals.Hospital count",
+              "nativeQueryRef": "Hospital count",
+              "displayName": "Hospital count"
             }
           ]
         }

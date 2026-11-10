@@ -1,12 +1,12 @@
 {
-  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.14.0/schema.json",
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.13.0/schema.json",
   "name": "cd1178f0d396e7740e61",
   "position": {
-    "x": 39.288256227758005,
-    "y": 8.5409252669039137,
+    "x": 40,
+    "y": 6,
     "z": 0,
-    "height": 83.70106761565836,
-    "width": 1501.494661921708,
+    "height": 98,
+    "width": 1492,
     "tabOrder": 0
   },
   "visual": {
@@ -21,10 +21,10 @@
                   {
                     "value": "ONE WEEK, HOSPITAL BY HOSPITAL",
                     "textStyle": {
-                      "fontWeight": "bold",
-                      "fontFamily": "Segoe UI Semibold",
                       "fontSize": "24pt",
-                      "color": "#163c6e"
+                      "color": "#163c6e",
+                      "fontFamily": "Segoe UI Semibold",
+                      "fontWeight": "bold"
                     }
                   }
                 ]
@@ -34,9 +34,9 @@
                   {
                     "value": "Pick a week (it opens on 3 January 2021, the peak of the winter surge). Bubble size: COVID-19 patients that week.",
                     "textStyle": {
-                      "fontFamily": "Segoe UI",
                       "fontSize": "11pt",
-                      "color": "#5b6573"
+                      "color": "#5b6573",
+                      "fontFamily": "Segoe UI"
                     }
                   }
                 ]

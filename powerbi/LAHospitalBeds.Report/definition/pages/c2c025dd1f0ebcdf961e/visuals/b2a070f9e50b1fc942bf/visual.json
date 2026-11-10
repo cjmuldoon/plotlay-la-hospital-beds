@@ -23,12 +23,12 @@
                       "Entity": "Weeks"
                     }
                   },
-                  "Property": "week_date"
+                  "Property": "month_start"
                 }
               },
-              "queryRef": "Weeks.week_date",
-              "nativeQueryRef": "week_date",
-              "displayName": "Week",
+              "queryRef": "Weeks.month_start",
+              "nativeQueryRef": "month_start",
+              "displayName": "Month",
               "active": true
             }
           ]
@@ -78,7 +78,7 @@
                     "Entity": "Weeks"
                   }
                 },
-                "Property": "week_date"
+                "Property": "month_start"
               }
             },
             "direction": "Ascending"
@@ -101,7 +101,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'Inpatient and staffed adult ICU beds in use, each week'"
+                  "Value": "'Inpatient and staffed adult ICU beds in use, each month'"
                 }
               }
             },
@@ -130,7 +130,7 @@
             "axisType": {
               "expr": {
                 "Literal": {
-                  "Value": "'Continuous'"
+                  "Value": "'Categorical'"
                 }
               }
             },
@@ -172,5 +172,11 @@
         }
       ]
     }
-  }
+  },
+  "annotations": [
+    {
+      "name": "plotlay.categoryPoints",
+      "value": "47"
+    }
+  ]
 }

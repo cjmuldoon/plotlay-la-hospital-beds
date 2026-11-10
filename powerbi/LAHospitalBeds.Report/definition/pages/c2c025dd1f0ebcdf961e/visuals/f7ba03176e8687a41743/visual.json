@@ -23,12 +23,12 @@
                       "Entity": "Weeks"
                     }
                   },
-                  "Property": "week_date"
+                  "Property": "month_start"
                 }
               },
-              "queryRef": "Weeks.week_date",
-              "nativeQueryRef": "week_date",
-              "displayName": "Week",
+              "queryRef": "Weeks.month_start",
+              "nativeQueryRef": "month_start",
+              "displayName": "Month",
               "active": true
             }
           ]
@@ -43,12 +43,12 @@
                       "Entity": "Weeks"
                     }
                   },
-                  "Property": "COVID-19 patients"
+                  "Property": "COVID-19 patients, weekly average"
                 }
               },
-              "queryRef": "Weeks.COVID-19 patients",
-              "nativeQueryRef": "COVID-19 patients",
-              "displayName": "COVID-19 patients"
+              "queryRef": "Weeks.COVID-19 patients, weekly average",
+              "nativeQueryRef": "COVID-19 patients, weekly average",
+              "displayName": "COVID-19 patients (average week)"
             }
           ]
         }
@@ -63,7 +63,7 @@
                     "Entity": "Weeks"
                   }
                 },
-                "Property": "week_date"
+                "Property": "month_start"
               }
             },
             "direction": "Ascending"
@@ -86,7 +86,7 @@
             "text": {
               "expr": {
                 "Literal": {
-                  "Value": "'COVID-19 patients in hospital, each week'"
+                  "Value": "'COVID-19 patients in hospital, the average week of each month'"
                 }
               }
             },
@@ -115,7 +115,7 @@
             "axisType": {
               "expr": {
                 "Literal": {
-                  "Value": "'Continuous'"
+                  "Value": "'Categorical'"
                 }
               }
             },
@@ -149,7 +149,7 @@
             "end": {
               "expr": {
                 "Literal": {
-                  "Value": "9000D"
+                  "Value": "8000D"
                 }
               }
             }
@@ -157,5 +157,11 @@
         }
       ]
     }
-  }
+  },
+  "annotations": [
+    {
+      "name": "plotlay.categoryPoints",
+      "value": "47"
+    }
+  ]
 }

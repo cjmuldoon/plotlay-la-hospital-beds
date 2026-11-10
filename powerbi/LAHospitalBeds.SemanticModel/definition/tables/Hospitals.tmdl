@@ -2,9 +2,9 @@ table Hospitals
 	lineageTag: 2bc84779-6054-c051-667e-e4170b25ae41
 
 	/// Hospitals that reported to HHS in Los Angeles County
-	measure Hospitals = COUNTROWS ( Hospitals )
+	measure 'Hospital count' = COUNTROWS ( Hospitals )
 		formatString: #,0
-		lineageTag: 7945381e-f13e-9802-23d4-248fafc02c1d
+		lineageTag: 7e4f3f1f-c9cc-70fd-d1fb-d88512059569
 
 	column hospital_pk
 		dataType: string
@@ -104,18 +104,18 @@ table Hospitals
 	column lat
 		dataType: double
 		lineageTag: 091e270e-a600-ad45-27a3-60711a725623
-		dataCategory: Latitude
 		summarizeBy: none
 		sourceColumn: lat
+		dataCategory: Latitude
 
 		annotation SummarizationSetBy = Automatic
 
 	column lng
 		dataType: double
 		lineageTag: 81d78289-b1cd-11ae-4d2b-f8e4d7e0b075
-		dataCategory: Longitude
 		summarizeBy: none
 		sourceColumn: lng
+		dataCategory: Longitude
 
 		annotation SummarizationSetBy = Automatic
 
@@ -141,4 +141,3 @@ table Hospitals
 				    Short_name_short
 
 	annotation PBI_ResultType = Table
-

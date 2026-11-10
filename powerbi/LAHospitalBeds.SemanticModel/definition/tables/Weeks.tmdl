@@ -26,6 +26,11 @@ table Weeks
 		formatString: #,0
 		lineageTag: e30c4161-d28e-6b48-0a8f-6690fa6f881b
 
+	/// The average week (for the monthly lines: a weekly axis scrolled in Desktop)
+	measure 'COVID-19 patients, weekly average' = AVERAGEX ( VALUES ( Weeks[week] ), [COVID-19 patients] )
+		formatString: #,0
+		lineageTag: b05ed79a-b56b-7157-624e-b47392a05199
+
 	/// The busiest week of those in the filter
 	measure 'Peak COVID-19 patients' = MAXX ( VALUES ( Weeks[week] ), [COVID-19 patients] )
 		formatString: #,0
@@ -128,7 +133,14 @@ table Weeks
 
 		annotation SummarizationSetBy = Automatic
 
-		annotation UnderlyingDateTimeDataType = Date
+	column month_start
+		dataType: dateTime
+		formatString: mmm yyyy
+		lineageTag: 72cd2987-21fa-5bac-921f-97ec65259e1e
+		summarizeBy: none
+		sourceColumn: month_start
+
+		annotation SummarizationSetBy = Automatic
 
 	partition Weeks = m
 		mode: import
@@ -138,9 +150,9 @@ table Weeks
 				    Promoted = Table.PromoteHeaders(Source, [PromoteAllScalars = true]),
 				    Kept = Table.SelectColumns(Promoted, {"hospital_pk", "week", "beds", "beds_used", "occupancy", "covid_patients", "icu_beds", "icu_used", "icu_occupancy"}),
 				    Typed = Table.TransformColumnTypes(Kept, {{"hospital_pk", type text}, {"week", type text}, {"beds", type number}, {"beds_used", type number}, {"occupancy", type number}, {"covid_patients", type number}, {"icu_beds", type number}, {"icu_used", type number}, {"icu_occupancy", type number}}, "en-US"),
-				    Dated = Table.AddColumn(Typed, "week_date", each Date.FromText([week]), type date)
+				    Dated = Table.AddColumn(Typed, "week_date", each Date.FromText([week]), type date),
+				    Col_month_start = Table.AddColumn(Dated, "month_start", each Date.StartOfMonth([week_date]), type date)
 				in
-				    Dated
+				    Col_month_start
 
 	annotation PBI_ResultType = Table
-

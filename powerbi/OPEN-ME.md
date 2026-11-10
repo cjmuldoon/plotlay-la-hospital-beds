@@ -38,8 +38,8 @@ On **One week**, pick **2023-03-05** and the inpatient card reads 80.9% with 609
 
 ## The model
 
-- **Hospitals**: one row per hospital (`data/tables/hospitals.csv`): its CMS number, name, type, city, position, beds (the median week of 2023-24) and how full it was in the winter surge and in 2023-24. Measure: `Hospitals`.
-- **Weeks**: one row per hospital and week (`hospital_weeks.csv`), 7 June 2020 to 21 April 2024, related to Hospitals by `hospital_pk`. `week` is the text date the slicer shows; `week_date` is the same date as a date, for the line charts. Measures: `Beds in use`, `ICU beds in use` (each the beds in use over the beds, added up first, so a big hospital counts for more), `COVID-19 patients`, `Peak COVID-19 patients`, `Peak ICU beds in use`, `Hospitals reporting`.
+- **Hospitals**: one row per hospital (`data/tables/hospitals.csv`): its CMS number, name, type, city, position, beds (the median week of 2023-24) and how full it was in the winter surge and in 2023-24. Measure: `Hospital count`.
+- **Weeks**: one row per hospital and week (`hospital_weeks.csv`), 7 June 2020 to 21 April 2024, related to Hospitals by `hospital_pk`. `week` is the text date the slicer shows; `week_date` is the same date as a date, and `month_start` its month, for the monthly line charts (a weekly axis scrolled in Desktop). Measures: `Beds in use`, `ICU beds in use` (each the beds in use over the beds, added up first, so a big hospital counts for more), `COVID-19 patients`, `Peak COVID-19 patients`, `Peak ICU beds in use`, `Hospitals reporting`.
 - **Tracts**: one row per census tract (`tract_access.csv`): people (ACS 2018-22), the straight-line km to the nearest general hospital, the band, and beds per 1,000 people within 10 km. `band` sorts by `band_order`. Measures: `People`, `Within 5 km`, `People 10 km or more`, `Distance, people-weighted`, `Beds per 1,000 within 10 km`.
 
 ## The maps
